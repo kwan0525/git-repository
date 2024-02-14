@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>document.getElementsByTagName()&lt;예제 8-6&gt;</title>
+        <script>
+            function change() {
+                var spanArray = document.getElementsByTagName("span1");
+                    for(var a=0; a<spanArray.length; a++) {
+                    var span = spanArray[a];
+                    span.style.color = "orchid";
+                    span.style.fontSize = "20px";
+                    }
+                    var spanArray = document.getElementsByTagName("span2");
+                    for(var k=0; k<spanArray.length; k++) {
+                    var span = spanArray[k];
+                    span.style.color = "blue";
+                    span.style.fontSize = "30px";
+                                    }
+                    var spanArray = document.getElementsByTagName("span3");
+                    for(var h=0; h<spanArray.length; h++) {
+                    var span = spanArray[h];
+                    span.style.color = "red";
+                    span.style.fontSize = "40px";
+                    }
+                    var spanArray = document.getElementsByTagName("span4");
+                    for(var s=0; s<spanArray.length; s++) {
+                    var span = spanArray[s];
+                    span.style.color = "green";
+                    span.style.fontSize = "px";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3><span3>내가 좋아하는 과일&lt;예제 8-6&gt;</span3></h3>
+        <button onclick="change()"><span4>누르세요</span4></button>
+        <hr>
+        저는 빨간 <span1>사과</span1>를 좋아해서 아침마다 한 개씩 먹고 있어요.
+        <span2>운동할</span2> 때는 중간 중간에 <span1>바나나</span1>를 먹지요.<span2>탄수화물</span2> 섭취가 빨라 힘이 납니다.
+        또한 <span2>달콤한</span2> 향기를 품은<span1>체리</span1>와 <span2>여름</span2> 냄새 물씬 나는 <span1>자두</span1>를 좋아합니다.
+    </body>
+</html>

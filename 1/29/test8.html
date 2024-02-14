@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>write()와 writeln() 활용&lt;예제 8-7&gt;</title>
+
+        <script>
+            function change() {
+                var spanArray = document.getElementsByTagName("span1");
+                    for(var a=0; a<spanArray.length; a++) {
+                    var span = spanArray[a];
+                    span.style.color = "orchid";
+                    span.style.fontSize = "20px";
+                    }
+                    var spanArray = document.getElementsByTagName("span2");
+                    for(var b=0; b<spanArray.length; b++) {
+                    var span = spanArray[b];
+                    span.style.color = "skyblue";
+                    span.style.fontSize = "30px";
+                    }
+                    var spanArray = document.getElementsByTagName("span3");
+                    for(var c=0; c<spanArray.length; c++) {
+                    var span = spanArray[c];
+                    span.style.color = "green";
+                    span.style.fontSize = "30px";
+                    }
+                               }
+                </script>
+    </head>
+    <body>
+        <h3><span1>write()와 writeln() 활용</span1>&lt;<span2>예제 8-7</span2>&gt;</h3>
+        <button onclick="change()"><span4>누르세요</span4></button>
+        
+        <hr>
+        <script>
+            document.write("<h3><span3>동물원에 소풍갑시다</span></h3>");
+            document.write("<p style='color:blue'>날씨가 좋아");
+            document.write("소풍갑니다</p>");
+            document.write("<span style='color:red'> 2+3");
+            document.write("명입니다.<br>"); //다음 줄로 넘어가기
+            document.writeln(5); //다음 줄에 넘어가지 못함
+            document.writeln("명입니다.<br></span>");
+        </script>
+    </body>
+</html>

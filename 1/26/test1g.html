@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF=8">
+        <title>로또 </title>
+        <h3>10개의 숫자와 5개의 문자로 된 배열을 만든다. 거기에서 무작위로 4개의 숫자나 문자를 취하여 이것과 맞는 
+            복권은 당첨된다는 메세지를 출력한다.&lt;중복 안됨&gt;</h3><hr>
+        <script>          
+            var lotto =[];
+            while(lotto.length < 6) 
+            {
+                var num = parseInt(Math.random() * 8 + 1);
+                if (lotto.indexOf(num) == -1) {
+                    lotto.push(num);
+                }
+            }               
+                document.write('이번주 당첨 번호 : ' + lotto);
+            </script>
+       </head>
+    <body>
+        
+    </body>
+</html>

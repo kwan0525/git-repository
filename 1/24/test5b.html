@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head><title>if-else</title>
+    </head>
+    <body>
+        <h3>if-else를 이용한 학점 매기기</h3>
+        <hr>
+        <script>
+            var grade;
+            var score = prompt("황기태 님 점수를 입력하세요", 100);
+            score = parseInt(score); // 문자열을 숫자로 바꿈
+            switch (true){ // score가 90이상
+             case (score >=95) : grade ="A+"
+             case 99:
+             case 98:
+             case 97:
+             case 96:
+             case 95:
+                grade = "A+";
+                break;
+             default:
+                grade = "F";
+            }
+            document.write(score + "는" + grade +"입니다.<br>")
+        </script>
+    </body>
+</html>

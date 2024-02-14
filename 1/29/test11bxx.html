@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><title>문서의 동적 구성</title>
+<script>
+function createDIV() { 
+	let obj = document.getElementById("parent");
+	let newDIV = document.createElement("div");
+	newDIV.innerHTML = "&lt;DIV&gt;";
+	newDIV.setAttribute("id", "myDiv");
+	newDIV.style.backgroundColor="red";
+	obj.appendChild(newDIV);
+	newDIV.onclick = function() {
+		let p = this.parentElement; // 부모 HTML 태그 요소
+		p.removeChild(this); // 자신을 부모로부터 제거
+	};		
+		
+	let newDIV1 = document.createElement("div1");
+	newDIV1.innerHTML = "&lt;div&gt;";
+	newDIV1.setAttribute("id", "myDiv1");
+	newDIV1.style.backgroundColor="orange";
+	newDIV.appendChild(newDIV1);
+
+
+	
+	let newp = document.createElement("P");
+	newp.innerHTML = "&lt;p&gt;";
+	newp.setAttribute("id", "myp");
+	newp.style.backgroundColor="yellow";
+	newDIV1.appendChild(newp);
+	
+	let newspan = document.createElement("span");
+	newspan.innerHTML = "&lt;span&gt;";
+	newspan.setAttribute("id", "myspan");
+	newspan.style.backgroundColor="green";
+	newDIV1.appendChild(newspan);
+}
+
+
+</script>
+</head>
+<body id="parent">
+<h3>DIV 객체를 동적으로 생성, 삽입, 삭제하는 예제</h3>
+<hr>
+<button onclick="createDIV()">DIV</button>
+</body>
+</html>

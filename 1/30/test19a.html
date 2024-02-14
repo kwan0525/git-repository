@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>select 객체에서 선택한 커피출력&lt;예제 9-19&gt;</title>
+<script>
+function drawImage() {
+	var sel = document.getElementById("fruits");
+	var img = document.getElementById("fruitimage");
+	img.src = sel.options[sel.selectedIndex].value;
+}
+</script>
+</head>
+<body onload="drawImage()">
+<h3>select 객체에서 선택한 커피출력&lt;예제 9-19&gt;</h3>
+<hr>
+과일을 선택하면 이미지가 출력됩니다.<p>
+<form>
+<select id="fruits" onchange="drawImage()">
+	<option value="https://image.idus.com/image/files/5395af01c6404d788e2415bbfe6fe562_1080.jpg">카페라떼
+	<option value="https://cdn.cashfeed.co.kr/attachments/032b902bbc.jpg" selected>달고나라떼
+	<option value="https://th.bing.com/th/id/OIP.IwBIRdDl2WmDrIQNfith-gHaLG?rs=1&pid=ImgDetMain">자몽라떼
+</select>
+<img id="fruitimage" src="images/banana.gif" alt="">
+</form>
+</body>
+</html>

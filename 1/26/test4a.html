@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script language="JavaScript">
+  //오늘 생일인사람 찾아내기
+  function findbirth ()
+  {
+  //현재 날자, 시간 저장
+  var now = new Date();
+  //월 추출
+  var month = now.getMonth() + 1;
+  month = ((month < 10) ? "0" : "") + month;
+  //일 추출
+  var daynr = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+  //월과 일을 "MM월 DD일" 형식으로 변환
+  var md = month + "월 " + daynr + "일";
+
+ //생일 일치 여부 확인후 생일 인사람 출력
+ switch (md) {
+
+
+case "01월 11일" :
+document.close();
+document.aa.findbirth.value="유성수"
+break;
+
+case "01월 11일" :
+document.close();
+document.aa.findbirth.value="윤기수 ";
+break;
+
+case "01월 22일" :
+document.close();
+document.aa.findbirth.value="유말영";
+break;
+
+case "02월 21일" :
+document.close();
+document.aa.findbirth.value="한광재";
+break;
+
+case "02월 23일" :
+document.close();
+document.aa.findbirth.value="김신경";
+break;
+
+case "02월 26일" :
+document.close();
+document.aa.findbirth.value="강문관";
+break;
+
+case "03월 01일" :
+document.close();
+document.aa.findbirth.value="송지미";
+break;
+
+case "03월 04일" :
+document.close();
+document.aa.findbirth.value="공기세";
+break;
+
+ default :
+ document.close();
+ document.aa.findbirth.value="생일자가 없습니다."+"\n"+""+"즐거운 하루 되세요";
+ break;
+ }
+}
+</script>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<link href="http://168.219.153.36/ep/gwp/Support/left.css" rel="stylesheet" type="text/css">
+<style>
+body{
+ scrollbar-face-color:"#ffffff";
+ scrollbar-shadow-color:"#ffffff";
+ scrollbar-highlight-color:"#ffffff";
+ scrollbar-3dlight-color:"#FFFFFF";
+ scrollbar-darkshadow-color:"#FFFFFF";
+ scrollbar-track-color:"#ffffff";
+ scrollbar-arrow-color:"#ffffff";}
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"  onLoad="javascript:findbirth();">
+<form name="aa">
+  <table width="168" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><p align="center" class="none">
+          <textarea name="findbirth" cols="30" class="none" rows="5"></textarea>
+        </p></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

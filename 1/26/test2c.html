@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/CSS">
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 700px;
+            height: 700px;
+        }
+        td {
+            border: 2px solid black;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+
+        const makeLotto = () => {
+            const lottoArr = new Set();
+            while (lottoArr.size != 7) {
+                const lottoNum = parseInt((Math.random() * 45 + 1));
+                lottoArr.add(lottoNum);
+            }
+            return [...lottoArr];
+        };
+
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        let html = '<table>';
+
+        [0, 1, 2, 3, 4].forEach((el, index) => {
+            html += `<tr><td>${index + 1} 회</td>`;
+            const rowLottoValues = makeLotto();
+            rowLottoValues.forEach(lotto => html += `<td>${lotto}</td>`);
+            html += '</tr>';
+        });
+
+        html += '</table>';
+
+        document.write(html);
+
+
+    </script>
+</body>
+
+</html>

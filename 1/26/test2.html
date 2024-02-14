@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+       <script>
+        const candidate = Array(45).fill(0).map((v,i)=>i+1);
+        //console.log(candidate);
+         const shuffle = [];
+
+         while(candidate.length>0) {
+            let index = ~~(Math.random()*candidate.length);
+            let randomArray =candidate.splice(index, 1);
+            shuffle.push(randomArray[0]);
+         }
+         console.log(shuffle);
+          
+       </script>
+    </head>
+    <body>
+    </body>            
+</html>

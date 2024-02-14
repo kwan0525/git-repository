@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/CSS">
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 700px;
+            height: 700px;
+        }
+        td {
+            border: 2px solid black;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+
+        const makeLotto = () => {
+            const lottoArr = new Set();
+            while (lottoArr.size != 7) {
+                const lottoNum = parseInt((Math.random() * 7 + 1));
+                lottoArr.add(lottoNum);
+            }
+            return [...lottoArr];
+        };
+        
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        let html = '<table>';
+            const lotto = [];
+            for (let hang = 1; hang < 6; hang++) {
+                let lottoCount = hang-1;
+                lotto[lottoCount] = makeLotto();
+                html += '<tr>';
+                for (let yul = 1; yul < 8; yul++) {
+                    let oneLottoNum = yul-1;
+                    if (yul == 1){
+                    html += `<td>${hang} 회</td>`;
+                    } else {
+                    html += `<td>${lotto[lottoCount][oneLottoNum]}</td>`;
+                    }
+                }
+                html += '</tr>';
+            }
+        html += '</table>';
+
+        document.write(html);
+        
+
+    </script>
+</body>
+
+</html>

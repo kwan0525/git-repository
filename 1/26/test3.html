@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>로또 번호 추첨기</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        color: #3f51b5;
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        background-color: #3f51b5;
+        color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    button:hover {
+        background-color: #303f9f;
+    }
+    #numbers {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+</style>
+<body>
+	<h1>로또 번호 추첨기</h1>
+	<p>클릭해서 번호를 추첨하세요.</p>
+	<button onclick="pickNumbers()">번호 추첨</button>
+	<p id="numbers"></p>
+
+	<script>
+        function pickNumbers() {
+			var numbers = [];
+			while (numbers.length < 6) {
+				var randomNumber = Math.floor(Math.random() * 45) + 1;
+				if (numbers.indexOf(randomNumber) === -1) {
+					numbers.push(randomNumber);
+				}
+			}
+			var numbersElement = document.getElementById("numbers");
+			numbersElement.innerHTML = "추첨된 번호: ";
+			numbersElement.classList.remove("show");
+			var i = 0;
+			var intervalId = setInterval(function() {
+				if (i === numbers.length) {
+					clearInterval(intervalId);
+					numbersElement.classList.add("show");
+					return;
+				}
+				numbersElement.innerHTML += numbers[i++] + " ";
+			}, 500);
+		}
+	</script>
+</body>
+</html>

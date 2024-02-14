@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>innerHTML 활용&lt;예제 8-3&gt;</title>
+    
+    <script>
+        function change() {
+             var p = document.getElementById("firstP");
+             p.innerHTML= "나의<img src='https://th.bing.com/th/id/OIP.pBeJe4yPXB3QqJjBeDLxkAHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7'>강아지";
+        }
+    </script>
+    </head>
+    <body>
+        <h3>innerHTML 활용 : 아래 글자에 클릭하면
+            예쁜 강아지가 보입니다&lt;예제 8-3&gt;
+        </h3>
+        <hr>
+        <p id="firstP" style="color:blue"
+        onclick="change()">
+      여기에 <span style="color:red">클릭하세요</span></p>
+    </body>
+</html>

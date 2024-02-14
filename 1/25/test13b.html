@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head><title>new Object()로 사용자 객체 만들기&lt;예제 7-9&gt;</title>
+    <script>
+        //메소드로 사용할 3개의 함수 작성
+        function inquiry() { return this.balance ;}//잔금 조회
+        function deposit(money) { this.balance += money; }//money 만큼 저금
+        function withdraw(money) { //예금 인출, money는 인출하고자 하는 액수
+                                //money가 balance보다 작다고 가정
+                    this.balance -= money;
+                    return money;
+                }
+        //사용자 객체 만들기
+        let account1 = new Object();
+        account1.owner = "황기태"; //계좌 주인 프로퍼티 생성 및 초기화
+        accoun1t.code = "111"; //코드 프로퍼티 생성 및 초기화
+        accoun1t.balance = 35000; //잔액 프로퍼티 생성 및 초기화
+        account1.inquiry = inquiry; //메소드 작성
+        account1.deposit = deposit; //메소드 작성
+        account1.withdraw = withdraw; //메소드 작성
+
+        let accoun2 = new Object();
+        account2.owner = "황기"; //계좌 주인 프로퍼티 생성 및 초기화
+        account2.code = "222"; //코드 프로퍼티 생성 및 초기화
+        account2.balance = 35000; //잔액 프로퍼티 생성 및 초기화
+
+        let account3 = new Object();
+        account3.owner = "황"; //계좌 주인 프로퍼티 생성 및 초기화
+        account3.code = "333"; //코드 프로퍼티 생성 및 초기화
+        account3.balance = 35000; //잔액 프로퍼티 생성 및 초기화
+
+      
+    </script></head>
+    <body>
+        <h3>new Object()로 사용자 객체 만들기&lt;예제 7-9&gt;</h3>
+        <hr>
+        <script>
+            //객체 활용
+            document.write("account : ");
+            document.write(account.owner + ",");
+            document.write(account.code + ",");
+            document.write(account.balance + "<br>");
+
+            account.deposit(10000); //10000원 저금
+            document.write("10000원 저금 잔액은 " + account.inquiry() + "<br>");
+            account.withdraw(5000); //5000원 인출
+            document.write("5000원 인출 후 잔액은 " + account.inquiry() + "<br>");
+          
+            let accounts = new Array();
+            accounts[0] = new Object();
+            accounts[0].owner = "황기태";
+            accounts[1] = new Object();
+            accounts[1].owner = "박기태";
+            accounts[2].owner = "이기태";
+        </script>
+    </body>
+</html>

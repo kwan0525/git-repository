@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTf=8">
+        <title>자바스크립트 로또 &lt;배열방법&gt;</title>
+    </head>
+    <body>
+        <h3>자바스크립트 로또 &lt;배열방법&gt</h3>
+        <hr>
+        <script>
+             var lotto = []; 
+     for(var i=0;i<6;i++){
+      var num = Math.floor(Math.random() * 45) + 1;
+    for(var j in lotto){
+        while(num == lotto[j]){ 
+          num = Math.floor(Math.random() * 45) + 1;
+        }
+      }
+      lotto.push(num);
+    }
+    lotto.sort(function(a,b){
+      return a - b;
+    });
+     document.write('이번주 로또 번호 : ' + lotto);
+                        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>생일</title>
+        
+    </head>
+    <body>
+        <h3>생일</h3>
+        <hr>
+        <script>
+            function birthday(name, dbirth) {
+                let today = new Date();
+                if(dbirth.getMonth() == today.getMonth()
+                && dbirth.getDate() == today.getDate() ) {
+            document.write(name + "님 !! 생일축하합니다.!!" + "<hr>");
+        }
+            }
+            let student1 = new Object();
+            student1.name ="전영관";
+            student1.dbirth = new Date("2000.01.26");
+            student1.birthday = birthday;
+
+            student1.birthday(student1.name, student1.dbirth);
+
+            let student2 = new Object();
+            student2.name ="전영";
+            student2.dbirth = new Date("2000.01.26");
+            student2.birthday = birthday;
+
+            student2.birthday(student2.name, student2.dbirth);
+
+            let student3 = new Object();
+            student3.name ="전";
+            student3.dbirth = new Date("2000.01.26");
+            student3.birthday = birthday;
+
+            student3.birthday(student3.name, student3.dbirth);
+        </script>
+    </body>
+</html>
